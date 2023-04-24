@@ -1,0 +1,140 @@
+/* Общие */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+@font-face {
+    font-family: 'sangha';
+    src: url("/fonts/sangha.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    }
+
+:root {
+    /* MAIN */
+    --main-dark: #28282D;
+    --main-dark-red: #FF0054;
+    --main-red: #FF0054;
+    --main-yellow: #F8D043;
+    --main-light: #FFE9D6;
+
+    /* BG */
+    --bg-light: #F6F0EC;
+    --bg-light-grey: #EDEDED;
+
+    /* STROKE */
+    --stroke-pink: #FFB9C5;
+    --stroke-grey: #DEDEDE;
+
+    /* TEXT */
+    --text-black: #28282D;
+    --white: #ffffff;
+
+    --black-translucent: rgba(18, 17, 17, 0.82);
+    --shadow-menu: rgba(0, 0, 0, 0.25);
+    --shadow: rgba(115, 115, 115, 0.25);
+    --shadow-title: rgba(0, 0, 0, 0.25);
+
+    --gap-cards: 20px;
+    --gap-icon: 10px;
+    --gap-10: 10px;
+}
+
+a, p, ul, li, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Golos Text', sans-serif;
+}
+
+a, .link-logo {
+    text-decoration: none;
+    color: var(--secondary-light);
+}
+
+a:hover {
+    color: var(--secondary-semi);
+    transition: color 300ms linear;
+}
+
+
+.link-logo:hover {
+    color: var(--secondary-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .container {
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: calc(100% - 40px);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .container {
+        max-width: calc(100% - 20px);
+    }
+}
+
+.btn {
+    font-family: 'Golos Text', sans-serif;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid var(--secondary-middle);
+    color: var(--white);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 11px 20px 9px 20px;
+    width: fit-content; 
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 81px;
+    color: var(--white);
+}
+
+/* header */
+
+.background-img{
+    background-image: url(/images/bg-header.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 1px;
+    background: var(--dark-elight);
+}
+
+/* hero-block */
+
+
+/* main */
+

@@ -38,6 +38,7 @@
     --gap-menu: 32px;
     --gap-16: 10px;
     --gap-10: 10px;
+    --gap-about: 32px
 }
 
 a, p, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -217,6 +218,63 @@ h2 {
 }
 
 /* main */
+
+/* О сети ресторанов */
+
+.about {
+    padding: 48px 0px 0px 0px;
+    display: flex;
+}
+
+.about-item {
+    width: calc((100%)/2);
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--text-black);
+    padding-right: 56px;
+}
+
+.about-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-right: 2px solid var(--stroke-grey);
+}
+
+.advantages-list {
+    padding-left: 56px;
+    display: flex;
+    gap: var(--gap-about);
+    flex-wrap: wrap;
+}
+
+.advantages-item {
+    width: calc((100% - var(--gap-about)*1)/2);
+}
+
+.advantages-title {
+    font-family: 'Sangha';
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--main-dark-red);
+    padding-bottom: 8px;
+}
+
+.advantages-description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--text-black);
+}
 
 /* .accent-title {
     font-family: 'Sangha';

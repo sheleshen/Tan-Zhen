@@ -17,8 +17,8 @@
 :root {
     /* MAIN */
     --main-dark: #28282D;
-    --main-dark-red: #E3483C;
-    --main-red: #B7382E;
+    --main-red: #E3483C;
+    --main-dark-red: #B7382E;
     --main-yellow: #F8D043;
     --main-light: #FFE9D6;
 
@@ -33,12 +33,14 @@
     /* TEXT */
     --text-black: #28282D;
     --white: #ffffff;
+    --grey: #A5A5A7;
 
     /* GAP */
     --gap-menu: 32px;
     --gap-16: 10px;
     --gap-10: 10px;
-    --gap-about: 32px
+    --gap-about: 32px;
+    --gap-20: 20px;
 }
 
 a, p, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -94,14 +96,28 @@ a:hover {
 .btn {
     font-family: 'Golos Text', sans-serif;
     background-color: rgba(0,0,0,0);
-    border: 1px solid var(--secondary-middle);
-    color: var(--white);
-    font-weight: 300;
+    border: 2px solid var(--main-red);
+    border-radius: 10px;
+    color: var(--text-black);
+    font-weight: 400;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 140%;
     text-align: center;
-    text-transform: uppercase;
-    padding: 11px 20px 9px 20px;
+    padding: 13px 17px;
+    width: fit-content; 
+}
+
+.btn-active {
+    font-family: 'Golos Text', sans-serif;
+    background-color: var(--main-red);
+    border: 2px solid var(--main-red);
+    border-radius: 10px;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    padding: 13px 17px;
     width: fit-content; 
 }
 
@@ -121,6 +137,7 @@ h2 {
     line-height: 90%;
     color: var(--text-black);
     padding-top: 80px;
+    text-transform: uppercase;
 }
 
 .img-object-fit {
@@ -265,7 +282,7 @@ h2 {
     line-height: 120%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--main-dark-red);
+    color: var(--main-red);
     padding-bottom: 8px;
 }
 
@@ -274,6 +291,140 @@ h2 {
     font-size: 18px;
     line-height: 140%;
     color: var(--text-black);
+}
+
+/* ЛУЧШИЕ БЛЮДА */
+
+.container-cards {
+    padding: 80px 0px;
+}
+
+.border-cards {
+    border-right: 2px solid var(--main-red);
+    border-left: 2px solid var(--main-red);
+}
+
+.title-tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
+.title-food {
+    padding-top: 0;
+}
+
+.text-food {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-left: 8px;
+}
+
+.discription-food {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--grey);
+}
+
+.btn-list {
+    display: flex;
+    gap: var(--gap-20);
+    padding-right: 16px;
+}
+
+/* Карточки товаров */
+
+.wrapper {
+    position: relative;
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1px;
+
+    overflow: hidden;
+}
+
+.cards-item {
+    padding: 0px 14px;
+    border-right: 2px solid var(--main-red);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: calc(100% / 4);
+}
+
+.cards-item:last-child {
+    border-right: 0px solid var(--main-red);
+}
+
+.title-img-cards {
+    padding-bottom: var(--gap-20);
+}
+
+.img-cards {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.title-cards {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: var(--text-black);
+    padding-top: var(--gap-16);
+}
+
+.price-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-cards {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--main-red);
+}
+
+.icon-cards {
+    padding: 13px;
+    border: 2px solid var(--main-red);
+    border-radius: 10px;
+}
+
+.arrow-item-cards {
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 14px 17px;
+    border: 2px solid var(--main-red);
+
+    position: absolute;
+}
+
+.cards-back {
+    border-radius: 10px 0px 0px 10px;
+
+    left: -56px;
+    top: 40%;
+}
+
+.cards-next {
+    border-radius: 0px 10px 10px 0px;
+
+    right: -56px;
+    top: 40%;
 }
 
 /* .accent-title {

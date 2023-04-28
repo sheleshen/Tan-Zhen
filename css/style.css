@@ -307,7 +307,7 @@ h2 {
     }
 }
 
-@media (min-width: 768px) and (max-width: 960px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .nav-list {
         display: none;
     }
@@ -359,6 +359,25 @@ h2 {
 @media (min-width: 320px) and (max-width: 600px) {
     .icon-list {
         gap: var(--gap-menu);
+    }
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+}
+
+@media (max-width: 1024px) {
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
     }
 }
 
@@ -493,7 +512,7 @@ h2 {
 
 @media (max-width: 600px) {
     .about {
-        padding: 48px 0px 0px 0px;
+        padding: 30px 0px 0px 0px;
         flex-direction: column;
         gap: var(--gap-20);
     }
@@ -501,7 +520,7 @@ h2 {
 
 @media (min-width: 600px) and (max-width: 768px) {
     .about {
-        padding: 48px 0px 0px 0px;
+        padding: 30px 0px 0px 0px;
         flex-direction: column;
         gap: var(--gap-20);
     }
@@ -623,25 +642,26 @@ h2 {
 
 /* ЛУЧШИЕ БЛЮДА */
 
+/* padding на pt */
 .container-cards {
-    padding: 80px 0px;
+    padding-top: 80px;
 }
 
 @media (max-width: 600px) {
     .container-cards {
-        padding: 50px 0px;
+        padding-top: 50px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .container-cards {
-        padding: 60px 0px;
+        padding-top: 60px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .container-cards {
-        padding: 70px 0px;
+        padding-top: 70px;
     }
 }
 
@@ -662,14 +682,14 @@ h2 {
 @media (max-width: 320px) {
     .title-tabs {
         padding-bottom: 16px;
-        gap: var(--gap-10);
+        gap: var(--gap-16);
     }
 }
 
 @media (min-width: 320px) and (max-width: 600px) {
     .title-tabs {
         padding-bottom: 24px;
-        gap: var(--gap-10);
+        gap: var(--gap-16);
     }
 }
 
@@ -718,6 +738,21 @@ h2 {
     .btn-list {
         gap: var(--gap-10);
         padding-right: 0px;
+        padding-left: 8px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .btn-list {
+        gap: var(--gap-10);
+        padding-right: 0px;
+        padding-left: 8px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .btn-list {
+        padding-left: 8px;
     }
 }
 
@@ -733,6 +768,47 @@ h2 {
     gap: 1px;
 
     overflow: hidden;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+
+.cards-list::-webkit-scrollbar-thumb {
+    background: var(--bg-light);
+}
+
+.cards-list::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background: var(--bg-light);
+}
+
+.cards-list::-webkit-scrollbar {
+    height: 80px;  
+}
+
+@media (max-width: 600px) {
+    .cards-list::-webkit-scrollbar {
+        height: 40px;  
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .cards-list::-webkit-scrollbar {
+        height: 50px;  
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards-list::-webkit-scrollbar {
+        height: 60px;  
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .cards-list::-webkit-scrollbar {
+        height: 70px;  
+    }
 }
 
 .cards-item {
@@ -836,6 +912,12 @@ h2 {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    .arrow-item-cards {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
     .arrow-item-cards {
         display: none;
     }
@@ -1089,7 +1171,8 @@ h2 {
 
 /* Отзывы */
 
-.container-reviews {
+/* Убрала padding */
+/* .container-reviews {
     padding: 80px 0px;
 }
 
@@ -1109,7 +1192,7 @@ h2 {
     .container-reviews {
         padding: 70px 0px;
     }
-}
+} */
 
 .border-reviews {
     border-right: 2px solid var(--main-light);
@@ -1125,7 +1208,7 @@ h2 {
 }
 
 .title-reviews {
-    padding-top: 0;
+    /* padding-top: 0; */
     color: var(--white);
 }
 
@@ -1182,19 +1265,58 @@ h2 {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .arrow-item-reviews {
+        display: none;
+    }
+}
+
 .reviews-list {
     display: flex;
     flex-wrap: nowrap;
     gap: 2px;
     overflow: hidden;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+
+.reviews-list::-webkit-scrollbar-thumb {
+    background: var(--main-red);
+}
+
+.reviews-list::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background: var(--main-red);
+}
+
+.reviews-list::-webkit-scrollbar {
+    height: 80px;  
 }
 
 @media (max-width: 600px) {
-
+    .reviews-list::-webkit-scrollbar {
+        height: 40px;  
+    }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+    .reviews-list::-webkit-scrollbar {
+        height: 50px;  
+    }
+}
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .reviews-list::-webkit-scrollbar {
+        height: 60px;  
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .reviews-list::-webkit-scrollbar {
+        height: 70px;  
+    }
 }
 
 .reviews-item {
@@ -1312,6 +1434,7 @@ h2 {
 @media (max-width: 600px) {
     .footer-list {
         flex-direction: column;
+        gap: 4px;
     }
 }
 
@@ -1326,12 +1449,20 @@ h2 {
 @media (max-width: 600px) {
     .footer-item {
         width: 100%;
+        gap: 4px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .footer-item {
         width: calc((100% - var(--gap-36)*1)/2);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-item-bottom {
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--light-secondary);
     }
 }
 

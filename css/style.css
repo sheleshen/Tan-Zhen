@@ -436,6 +436,25 @@ h2 {
     justify-content: center;
 }
 
+@media (max-width: 320px) {
+    .arrow-hero {
+        width: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .arrow-hero {
+        width: 20px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .arrow-hero {
+        width: 24px;
+    }
+}
+
+
 .back {
     border: 2px solid var(--main-yellow);
     border-radius: 20px 0px 0px 0px;
@@ -608,6 +627,24 @@ h2 {
     padding: 80px 0px;
 }
 
+@media (max-width: 600px) {
+    .container-cards {
+        padding: 50px 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .container-cards {
+        padding: 60px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-cards {
+        padding: 70px 0px;
+    }
+}
+
 .border-cards {
     border-right: 2px solid var(--main-red);
     border-left: 2px solid var(--main-red);
@@ -716,17 +753,17 @@ h2 {
 
 @media (min-width: 320px) and (max-width: 600px) {
     .cards-item {
-        min-width: calc(100% / 2);
+        min-width: calc(100%);
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .cards-item {
-        min-width: calc(100% / 3);
+        min-width: calc(100% / 2);
     }
 }
 
-@media (min-width: 768px) and (max-width: 960px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .cards-item {
         min-width: calc(100% / 3);
     }
@@ -831,6 +868,24 @@ h2 {
     padding: 80px 0px;
 }
 
+@media (max-width: 600px) {
+    .promotion-list {
+        padding: 50px 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .promotion-list {
+        padding: 60px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .promotion-list {
+        padding: 70px 0px;
+    }
+}
+
 .promotion-item {
     width: calc(100% / 2);
     display: flex;
@@ -865,8 +920,32 @@ h2 {
     text-align: center;
 }
 
+@media (max-width: 600px) {
+    .title-promotion {
+        padding-bottom: 30px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .title-promotion {
+        padding-bottom: 30px;
+    }
+}
+
 .promotion-text-list {
     padding-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+    .promotion-text-list {
+        padding: 0px 10px 30px 10px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .promotion-text-list {
+        padding: 0px 10px 30px 10px;
+    }
 }
 
 .promotion-text-item {
@@ -876,6 +955,12 @@ h2 {
     line-height: 150%;
     text-align: center;
     color: var(--white);
+}
+
+@media (max-width: 600px) {
+    .promotion-text-item {
+        font-size: 20px;
+    }
 }
 
 .img-sale {
@@ -903,6 +988,24 @@ h2 {
     gap: 24px;
     padding-top: 40px;
     padding-bottom: 80px;
+}
+
+@media (max-width: 600px) {
+    .news-list {
+        padding: 30px 0px 50px 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .news-list {
+        padding: 40px 0px 60px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .news-list {
+        padding: 40px 0px 70px 0px;
+    }
 }
 
 .news-item {
@@ -950,6 +1053,19 @@ h2 {
     padding-bottom: 32px;
 }
 
+@media (max-width: 600px) {
+    .news-title {
+        font-size: 20px;
+        padding-bottom: 16px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .news-title {
+        padding-bottom: 24px;
+    }
+}
+
 .news-description {
     font-weight: 400;
     font-size: 18px;
@@ -975,6 +1091,24 @@ h2 {
 
 .container-reviews {
     padding: 80px 0px;
+}
+
+@media (max-width: 600px) {
+    .container-reviews {
+        padding: 50px 0px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .container-reviews {
+        padding: 60px 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-reviews {
+        padding: 70px 0px;
+    }
 }
 
 .border-reviews {
@@ -1094,7 +1228,19 @@ h2 {
     font-size: 24px;
     line-height: 120%;
     color: var(--white);
-     padding-bottom: 32px;
+    padding-bottom: 32px;
+}
+
+@media (max-width: 600px) {
+    .reviews-name {
+        padding-bottom: 16px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .reviews-name {
+        padding-bottom: 24px;
+    }
 }
 
 .reviews-text {
